@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rich Text Editor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <h2><span>R</span>ich<span>Text</span> Editor</h2>
+        <nav>
+            <ul>
+                <li><a href="#">Novo</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <aside class="recents">
+            <h2>Documentos</h2>
+            <ul>
+                <!-- javavscript injecting -->
+            </ul>
+        </aside>
+        <main>
+            <div class="editor">
+                <div class="configs">
+                    <label>Autor:</label>
+                    <input type="text" id="author">
+                    <label>Titulo:</label>
+                    <input type="text" id="title">
+                </div>
+                <label for="">Documento</label>
+                <textarea id="content" cols="30" rows="10"></textarea>
+                <div class="buttons">
+                    <button>Salvar</button>
+                </div>
+            </div>
+            <div class="toolbar">
+                <i class='bx bx-palette'></i>
+                <i class='bx bx-font-color'></i>
+                <i class='bx bx-font-size' ></i>
+                <i class='bx bx-font-family' ></i>
+                <i class='bx bx-font' ></i>
+            </div>
+            <img src="assets/placeholder page.png" alt="documents" style="display: none;">
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

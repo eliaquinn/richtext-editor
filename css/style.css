@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+:root {
+    --clr-100: #002B5B;
+    --clr-90gre: #2B4865;
+    --clr-turq: #256D85;
+    --clr-turq-we: #8FE3CF;
+    --crl-transluc: rgba(0, 0, 0, .5);
+    --crl-neutro: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    height: 60px;
+    background: var(--clr-100);
+    box-shadow: 0 0 5px var(--crl-transluc);
+    color: var(--crl-neutro);
+}
+
+header h2 span {
+    color: var(--clr-turq-we);
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    padding: 3px 0px;
+    border-radius: 4px;
+    border: 2px solid var(--clr-turq-we);
+}
+
+header nav ul li a {
+    color: var(--clr-turq-we);
+    padding: 3px 30px;
+    text-decoration: none;
+}
+
+header nav ul li:hover,
+header nav ul li a:hover {
+    background: var(--clr-turq-we);
+    color: var(--clr-100);
+}
+
+.container {
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+.recents {
+    padding: 10px 10px;
+    background: var(--clr-turq);
+    box-shadow: 2px 5px 5px var(--crl-transluc);
+    overflow: auto;
+    width: 350px;
+}
+
+.recents h2 {
+    font-weight: 400;
+    text-align: center;
+    color: var(--crl-neutro);
+}
+
+.recents ul {
+    list-style: none;
+}
+
+.recents ul li {
+    background: var(--clr-turq-we);
+    margin: 5px 0;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+.recents ul li .title-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.recents ul li .title-card i {
+    font-size: 16pt;
+    cursor: pointer;
+}
+
+.recents ul li .title-card h3 {
+    font-weight: 400;
+}
+
+.recents .content-card h4 {
+    font-weight: 400;
+    font-size: 10pt;
+}
+
+.recents .content-card h5 {
+    font-weight: 400;
+    font-size: 9pt;
+}
+
+main {
+    display: flex;
+}
+
+.editor {
+    border: 1px solid #ccc;
+    box-shadow: 0 0 3px var(--crl-transluc);
+    margin: 20px;
+    width: calc(100vw - 500px);
+    padding: 10px;
+}
+
+.editor textarea {
+    border: 1px solid #ccc;
+    outline: none;
+    resize: none;
+    width: 100%;
+    height: calc(100% - 200px);
+    padding: 5px 10px;
+    font-size: 12pt;
+    font-weight: 300;
+}
+
+.editor .buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.editor .buttons button {
+    background: var(--crl-neutro);
+    border-radius: 5px;
+    border: 2px solid var(--clr-100);
+    padding: 7px 0px;
+    width: 150px;
+    color: var(--clr-100);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.editor .buttons button:hover {
+    background: var(--clr-90gre);
+    border: 2px solid var(--clr-90gre);
+    color: var(--crl-neutro);
+}
+
+.editor .configs {
+    margin-bottom: 10px;
+}
+
+.editor .configs label {
+    display: block;
+}
+
+.editor .configs input {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 0 10px;
+    font-size: 12pt;
+    color: #256D85;
+}
+
+.editor .configs input:focus {
+    border: 2px solid var(--clr-turq);
+}
+
+main .toolbar {
+    width: 120px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: var(--clr-turq);
+    padding: 20px;
+    box-shadow: -3px 5px 5px var(--crl-transluc);
+}
+
+main .toolbar i {
+    font-size: 24pt;
+    color: var(--crl-neutro);
+    border: 2px solid var(--clr-turq-we);
+    width: 40px;
+    height: 35px;
+    color: var(--crl-neutro);
+    margin: 3px;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+main .toolbar i:hover {
+    background: var(--crl-neutro);
+    border: 2px solid var(--clr-90gre);
+    color: var(--clr-90gre);
+}
+
+/* main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+} */

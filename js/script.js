@@ -34,7 +34,7 @@ function renderDataListDocs () {
         let li = `
         <li>
             <div class="title-card">
-                <h3>${data.title}</h3>
+                <h3 id="${data.id_save}">${data.title}</h3>
                 <i class='bx bx-x'></i>
             </div>
             <div class="content-card">
@@ -47,7 +47,6 @@ function renderDataListDocs () {
     })
 }
 
-listDocs.innerHTML = ''
 renderDataListDocs()
 
 btnSave.addEventListener('click', () => {

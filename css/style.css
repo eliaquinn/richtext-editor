@@ -207,9 +207,9 @@ main .toolbar i:hover {
     color: var(--clr-90gre);
 }
 
-/* main {
+main {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-} */
+}

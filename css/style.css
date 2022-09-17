@@ -25,6 +25,8 @@ header {
     background: var(--clr-100);
     box-shadow: 0 0 5px var(--crl-transluc);
     color: var(--crl-neutro);
+    position: relative;
+    z-index: 10;
 }
 
 header h2 span {
@@ -114,11 +116,27 @@ main {
 }
 
 .editor {
+    position: relative;
+    top: -800px;
     border: 1px solid #ccc;
     box-shadow: 0 0 3px var(--crl-transluc);
     margin: 20px;
     width: calc(100vw - 500px);
     padding: 10px;
+    background: #fff;
+}
+
+.editor.show {
+    animation: slideTop .3s ease-in forwards;
+}
+
+@keyframes slideTop {
+    0% {
+        top: -800px;
+    }
+    100% {
+        top: 0;
+    } 
 }
 
 .editor textarea {
@@ -147,6 +165,7 @@ main {
     color: var(--clr-100);
     font-weight: 500;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 .editor .buttons button:hover {
@@ -177,14 +196,32 @@ main {
     border: 2px solid var(--clr-turq);
 }
 
+/* .hide {
+    display: none;
+} */
+
 main .toolbar {
+    display: none;
+    position: relative;
+    right: -125px;
     width: 120px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     background: var(--clr-turq);
     padding: 20px;
     box-shadow: -3px 5px 5px var(--crl-transluc);
+}
+
+main .toolbar.active {
+    animation: slideRight .1s ease-in forwards;
+    display: block;
+}
+
+@keyframes slideRight {
+    0% {
+        right: -125px;
+    }
+    100% {
+        right: 0;
+    }
 }
 
 main .toolbar i {
@@ -207,9 +244,9 @@ main .toolbar i:hover {
     color: var(--clr-90gre);
 }
 
-main {
+/* main {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-}
+} */

@@ -65,7 +65,7 @@ header nav ul li a:hover {
     background: var(--clr-turq);
     box-shadow: 2px 5px 5px var(--crl-transluc);
     overflow: auto;
-    width: 350px;
+    width: 340px;
 }
 
 .recents h2 {
@@ -127,7 +127,7 @@ main {
 }
 
 .editor.show {
-    animation: slideTop .3s ease-in forwards;
+    animation: slideTop .4s ease-in forwards;
 }
 
 @keyframes slideTop {
@@ -196,9 +196,9 @@ main {
     border: 2px solid var(--clr-turq);
 }
 
-/* .hide {
-    display: none;
-} */
+main {
+    overflow: hidden;
+}
 
 main .toolbar {
     display: none;
@@ -211,7 +211,7 @@ main .toolbar {
 }
 
 main .toolbar.active {
-    animation: slideRight .1s ease-in forwards;
+    animation: slideRight .3s ease-in forwards;
     display: block;
 }
 
@@ -244,9 +244,10 @@ main .toolbar i:hover {
     color: var(--clr-90gre);
 }
 
-/* main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-} */
+main img {
+    position: absolute;
+    width: 350px;
+    height: 250px;
+    right: calc(100vh - 250px);
+    bottom: calc(100vh - 450px);
+}

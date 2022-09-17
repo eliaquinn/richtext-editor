@@ -41,9 +41,16 @@ export default class Module {
         })
     }
 
+    messageBox () {
+        alert("preecha todos os campos")
+    }
+
     savedDocument (element, localname, array) {
         element.addEventListener('click', () => {
             let date = new Date()
+            if(array[0].value == '') return this.messageBox()
+            if(array[1].value == '') return this.messageBox()
+            if(array[2].value == '') return this.messageBox()
         
             const documentsSaveds = {
                 id_save: crypto.randomUUID(),
@@ -58,6 +65,20 @@ export default class Module {
             array[0].value = ''
             array[1].value = ''
             array[2].value = ''
+        })
+    }
+
+    animationEditor (btnNewDoc, btnCancel, array) {
+        btnNewDoc.addEventListener('click', () => {
+            array[5].classList.add('active')
+            array[4].classList.add('show')
+            array[6].style.display = 'none'
+        })
+        
+        btnCancel.addEventListener('click', () => {
+            array[5].classList.remove('active')
+            array[4].classList.remove('show')
+            array[6].style.display = 'block'
         })
     }
 }
